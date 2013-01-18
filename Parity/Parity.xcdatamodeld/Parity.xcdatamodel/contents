@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Icon" representedClassName="Icon" syncable="YES">
+        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="iconSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IconSet" inverseName="icons" inverseEntity="IconSet" syncable="YES"/>
+    </entity>
+    <entity name="IconSet" representedClassName="IconSet" syncable="YES">
+        <attribute name="difficulty" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="icons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Icon" inverseName="iconSet" inverseEntity="Icon" syncable="YES"/>
+        <relationship name="scores" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Score" inverseName="iconSet" inverseEntity="Score" syncable="YES"/>
+    </entity>
+    <entity name="Score" representedClassName="Score" syncable="YES">
+        <attribute name="player" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="iconSet" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="IconSet" inverseName="scores" inverseEntity="IconSet" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="IconSet" positionX="-11" positionY="63" width="128" height="105"/>
+        <element name="Icon" positionX="169" positionY="207" width="128" height="120"/>
+        <element name="Score" positionX="-207" positionY="234" width="128" height="90"/>
+    </elements>
+</model>
