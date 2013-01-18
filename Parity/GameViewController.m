@@ -96,4 +96,12 @@
        
 }
 
+
+-(NSString *)justToTryGitChanges:(NSString *)GitChanges
+{
+    
+    return @"Git changes are so cool";
+}
+
+
 @end
