@@ -99,8 +99,10 @@
 
 -(NSString *)justToTryGitChanges:(NSString *)GitChanges
 {
+    NSString *toremove = @"a string to check the gitHub functionnality";
     
-    return @"Git changes are so cool";
+    return toremove;
+    
 }
 
 
