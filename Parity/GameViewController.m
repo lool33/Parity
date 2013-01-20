@@ -101,6 +101,8 @@
 {
     NSString *toremove = @"a string to check the gitHub functionnality";
     
+    toremove = [toremove stringByAppendingString:@"really strange those stuff with github"];
+    
     return toremove;
     
 }
